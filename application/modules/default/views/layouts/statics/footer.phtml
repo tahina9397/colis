@@ -1,0 +1,13 @@
+<?php
+$request = Zend_Controller_Front::getInstance()->getRequest();
+$resource = $request->getControllerName();
+$action  = $request->getActionName();
+
+$option = Zend_Registry::get("option");
+?>
+
+<div class="slim-footer">
+    <div class="container">
+        <p>&copy;&nbsp;2022</p>
+    </div><!-- container -->
+</div><!-- slim-footer -->

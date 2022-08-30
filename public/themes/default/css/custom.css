@@ -1,0 +1,14 @@
+div.form-errors > ul {
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+div.form-errors > ul li {
+  color: #ff4e4e;
+  list-style: none;
+  font-size: 0.93em;
+}
+
+.text-center {
+  text-align: center;
+}

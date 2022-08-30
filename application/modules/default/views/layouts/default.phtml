@@ -1,0 +1,43 @@
+<?php
+$request = Zend_Controller_Front::getInstance()->getRequest();
+$resource = $request->getControllerName();
+$action  = $request->getActionName();
+
+$version = Zend_Registry::get('version');
+?>
+
+<!DOCTYPE html>
+<html lang="<?php echo DEFAULT_LANG_ABBR ?>">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <?php
+  echo $this->headTitle();
+  ?>
+
+  <?php
+  echo $this->render("statics/header-scripts.phtml");
+  echo $this->headLink();
+  echo $this->headScript();
+  echo $this->render('partial/phpjs.phtml');
+  ?>
+
+</head>
+
+<body>
+  <?php
+  echo $this->render("statics/header.phtml");
+  echo $this->render("statics/navbar.phtml");
+  echo $this->layout()->content;
+  echo $this->render("statics/inline-scripts.phtml");
+  echo $this->inlineScript();
+  echo $this->render("statics/footer.phtml");
+  ?>
+
+  
+</body>
+
+</html>
